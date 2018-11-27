@@ -10,6 +10,8 @@
 #include <d3dx9.h> //DX 확장 함수
 #pragma comment(lib, "d3dx9.lib") //DX 확장 라이브러리
 
+#include "MainGame.h"
+
 char				m_sCls[128]; //윈도우 이름에 필요
 HINSTANCE			m_hInst		= NULL;
 HWND				m_hWnd		= NULL;
@@ -43,6 +45,7 @@ INT		Render();
 LRESULT MsgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam );
 LRESULT WINAPI WndProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam );
 
+MainGame mainGame;
 
 
 INT Create( HINSTANCE hInst)
@@ -217,6 +220,8 @@ INT Run()
 
 INT Init()
 {
+	mainGame.Init();
+
 	// 배경 텍스처 생성
 	D3DXIMAGE_INFO	pImgInf;
 
@@ -252,12 +257,13 @@ void Destroy()
 	{
 		m_pTx1->Release();
 		m_pTx1 = NULL;
+		mainGame.Destroy();
 	}
 }
 
 INT FrameMove()
 {
-	//업데이트
+	mainGame.Update();
 	return 0;
 }
 
@@ -278,6 +284,7 @@ INT Render()
 	if( FAILED( m_pd3dDevice->BeginScene() ) )
 		return -1;
 
+	mainGame.Render();
 
 	m_pd3dSprite->Begin(D3DXSPRITE_ALPHABLEND);
 
