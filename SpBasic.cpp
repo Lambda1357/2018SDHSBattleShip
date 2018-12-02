@@ -1,14 +1,7 @@
 //매크로 함수 //DXUtil에서 가져옴
-#define SAFE_DELETE(p)       { if(p) { delete (p);     (p)=NULL; } }
-#define SAFE_DELETE_ARRAY(p) { if(p) { delete[] (p);   (p)=NULL; } }
-#define SAFE_RELEASE(p)      { if(p) { (p)->Release(); (p)=NULL; } }
 
-#include <windows.h>
 
-#include <d3d9.h>  //DX 기본 함수
-#pragma comment(lib, "d3d9.lib") //DX 기본 라이브러리
-#include <d3dx9.h> //DX 확장 함수
-#pragma comment(lib, "d3dx9.lib") //DX 확장 라이브러리
+#include "stdafx.h"
 
 #include "MainGame.h"
 
@@ -23,7 +16,6 @@ DWORD				m_dScnY		= 600;			// Screen Height
 												// 항상 포인터들은 NULL로 초기화
 LPDIRECT3D9			m_pD3D		= NULL;			// D3D
 LPDIRECT3DDEVICE9	m_pd3dDevice= NULL;			// Device
-LPD3DXSPRITE		m_pd3dSprite= NULL;			// 2D Sprite
 BOOL				m_bWindow	= TRUE;			// Window mode
 BOOL				m_bShowCusor= TRUE;			// Show Cusor
 
@@ -125,14 +117,6 @@ INT Create( HINSTANCE hInst)
 		}
 	}
 
-	// DX의 스프라이트는 디바이스가 생성된 후에 만들어야 한다.
-	if(FAILED(D3DXCreateSprite(m_pd3dDevice, &m_pd3dSprite)))
-	{
-		SAFE_RELEASE(	m_pd3dDevice	);
-		SAFE_RELEASE(	m_pD3D			);
-		return -1;
-	}
-
 	ShowWindow( m_hWnd, SW_SHOW );
 	UpdateWindow( m_hWnd );
 	::ShowCursor(m_bShowCusor);
@@ -150,7 +134,6 @@ void Cleanup()
 {
 	Destroy();
 
-	SAFE_RELEASE(	m_pd3dSprite	);
 	SAFE_RELEASE(	m_pd3dDevice	);
 	SAFE_RELEASE(	m_pD3D			);
 }
@@ -286,19 +269,6 @@ INT Render()
 
 	mainGame.Render();
 
-	m_pd3dSprite->Begin(D3DXSPRITE_ALPHABLEND);
-
-	RECT	rt1 = {0,0,512, 256};
-	D3DXVECTOR3	vcCenter(200, 100, 0);
-	D3DXVECTOR3	vcPos(   300, 200, 0);
-
-	m_pd3dSprite->Draw(m_pTx1, &rt1, &vcCenter, &vcPos, D3DXCOLOR(1.0f,1.0f,1.0f,1.0f));
-
-//	m_pd3dSprite->Draw(…);
-//	m_pd3dSprite->Draw(…);
-
-	m_pd3dSprite->End();
-
 
 	m_pd3dDevice->EndScene();
 
@@ -322,6 +292,7 @@ INT WINAPI WinMain( HINSTANCE hInst, HINSTANCE, LPSTR, INT )
 	return Run();
 }
 
+LPDIRECT3DDEVICE9 GetD3D9Device() { return m_pd3dDevice; }
 
 
 

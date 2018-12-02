@@ -1,5 +1,5 @@
 #include "MainGame.h"
-
+#include "stdafx.h"
 
 
 MainGame::MainGame()
@@ -23,7 +23,9 @@ void MainGame::Update()
 
 void MainGame::Render()
 {
+	SPRITEMANAGER->BeginRender(false);
 
+	SPRITEMANAGER->EndRender();
 }
 
 void MainGame::Destroy()

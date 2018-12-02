@@ -16,6 +16,24 @@
     <Filter Include="Texture">
       <UniqueIdentifier>{e462b886-a27b-40b6-9749-d816ee81fd70}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Texture\SingleTexture">
+      <UniqueIdentifier>{c448364a-8748-4939-86c6-8499e2cbdb95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture\MultiTexture">
+      <UniqueIdentifier>{30ee950a-f93d-4a1d-a762-85135897d6c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{7e74041c-517f-4c43-a706-438bb3bfe0f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Object">
+      <UniqueIdentifier>{b6b5f73a-8c5e-4361-b67f-73d7f41c5d45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Time">
+      <UniqueIdentifier>{9ccd9b1f-1ecf-4fe7-861f-71cf7947223c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Input">
+      <UniqueIdentifier>{b2b93348-78a4-45cd-a437-412ceab0db15}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainGame.cpp">
@@ -28,6 +46,19 @@
     <ClCompile Include="Texture.cpp">
       <Filter>Texture</Filter>
     </ClCompile>
+    <ClCompile Include="SingleTexture.cpp">
+      <Filter>Texture\SingleTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiTexture.cpp">
+      <Filter>Texture\MultiTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>Manager\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame.h">
@@ -45,5 +76,18 @@
     <ClInclude Include="stdafx.h">
       <Filter>Header</Filter>
     </ClInclude>
+    <ClInclude Include="SingleTexture.h">
+      <Filter>Texture\SingleTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiTexture.h">
+      <Filter>Texture\MultiTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>Manager\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h" />
   </ItemGroup>
 </Project>
