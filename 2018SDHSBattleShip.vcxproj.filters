@@ -28,9 +28,6 @@
     <Filter Include="Manager\Object">
       <UniqueIdentifier>{b6b5f73a-8c5e-4361-b67f-73d7f41c5d45}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Manager\Time">
-      <UniqueIdentifier>{9ccd9b1f-1ecf-4fe7-861f-71cf7947223c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Manager\Input">
       <UniqueIdentifier>{b2b93348-78a4-45cd-a437-412ceab0db15}</UniqueIdentifier>
     </Filter>
@@ -58,7 +55,9 @@
     <ClCompile Include="ObjectManager.cpp">
       <Filter>Manager\Object</Filter>
     </ClCompile>
-    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Manager\Input</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame.h">
@@ -88,6 +87,8 @@
     <ClInclude Include="ObjectManager.h">
       <Filter>Manager\Object</Filter>
     </ClInclude>
-    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="InputManager.h">
+      <Filter>Manager\Input</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

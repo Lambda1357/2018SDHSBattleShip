@@ -26,6 +26,8 @@ using namespace std;
 #define SAFE_RELEASE(p)      { if(p) { (p)->Release(); (p)=NULL; } }
 
 LPDIRECT3DDEVICE9 GetD3D9Device();
+HWND GetHWnd();
+float GetDeltaTime();
 
 #define g_device GetD3D9Device()
 

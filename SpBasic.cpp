@@ -39,6 +39,11 @@ LRESULT WINAPI WndProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam );
 
 MainGame mainGame;
 
+float curTime;
+float oldTime;
+
+float deltaTime;
+
 
 INT Create( HINSTANCE hInst)
 {
@@ -173,6 +178,11 @@ LRESULT MsgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam )
 
 INT Run()
 {
+	oldTime = curTime;
+	curTime = GetTickCount();
+
+	deltaTime = curTime - oldTime;
+
 	// Enter the message loop
 	MSG msg;
 	memset( &msg, 0, sizeof(msg) );
@@ -293,7 +303,8 @@ INT WINAPI WinMain( HINSTANCE hInst, HINSTANCE, LPSTR, INT )
 }
 
 LPDIRECT3DDEVICE9 GetD3D9Device() { return m_pd3dDevice; }
-
+HWND GetHWnd() { return m_hWnd; }
+float GetDeltaTime() { return deltaTime; }
 
 
 
