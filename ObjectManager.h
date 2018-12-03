@@ -32,3 +32,4 @@ public:
 	virtual ~ObjectManager();
 };
 
+#define OBJECTMANAGER ObjectManager::GetInstance()

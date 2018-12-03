@@ -96,6 +96,7 @@ ObjectManager::ObjectManager() : paused(false)
 
 ObjectManager::~ObjectManager()
 {
+	Destroy();
 }
 
 
