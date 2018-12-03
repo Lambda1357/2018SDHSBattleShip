@@ -2,7 +2,7 @@
 #include "Singleton.h"
 #include "Object.h"
 
-
+class Object;
 class ObjectManager :
 	public Singleton<ObjectManager>
 {

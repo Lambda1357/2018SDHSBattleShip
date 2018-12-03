@@ -48,7 +48,7 @@ float deltaTime;
 INT Create( HINSTANCE hInst)
 {
 	m_hInst	= hInst;
-	strcpy(m_sCls, "D3D Tutorial");
+	strcpy_s(m_sCls, "D3D Tutorial");
 
 	//윈도우 클래스 초기화
 	WNDCLASS wc ={CS_CLASSDC, WndProc, 0L, 0L, m_hInst, NULL, 
@@ -214,31 +214,6 @@ INT Run()
 INT Init()
 {
 	mainGame.Init();
-
-	// 배경 텍스처 생성
-	D3DXIMAGE_INFO	pImgInf;
-
-	if( FAILED( D3DXCreateTextureFromFileEx(
-		m_pd3dDevice
-		, "./earth.bmp"
-		, D3DX_DEFAULT
-		, D3DX_DEFAULT
-		, 1
-		, 0
-		, D3DFMT_UNKNOWN
-		, D3DPOOL_MANAGED
-		, 0x0000001
-		, 0x0000001
-		, 0x00FFFFFF
-		, &pImgInf
-		, NULL
-		, &m_pTx1
-		)) )
-	{
-		MessageBox(NULL, "earth.bmp file Could not find", "Err", 0);
-		m_pTx1 = NULL;
-		return -1;
-	}
 
 	return 0;
 }

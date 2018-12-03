@@ -14,13 +14,6 @@
 
 using namespace std;
 
-#include "Singleton.h"
-
-#include "ObjectManager.h"
-#include "SpriteManager.h"
-#include "InputManager.h"
-
-
 #define SAFE_DELETE(p)       { if(p) { delete (p);     (p)=NULL; } }
 #define SAFE_DELETE_ARRAY(p) { if(p) { delete[] (p);   (p)=NULL; } }
 #define SAFE_RELEASE(p)      { if(p) { (p)->Release(); (p)=NULL; } }
@@ -52,13 +45,22 @@ typedef struct tagInfo
 
 enum DRAWORDERTAG
 {
-	DTAG_INFOUI,		
-	DATG_EFF,	
-	DTAG_UNIT,	
-	DTAG_TILEUI,	
-	DTAG_TILE,	
+	DTAG_INFOUI,
+	DATG_EFF,
+	DTAG_UNIT,
+	DTAG_TILEUI,
+	DTAG_TILE,
 	DTAG_BACKGROUND = 99
 
 };
+
+
+#include "Singleton.h"
+
+#include "ObjectManager.h"
+#include "SpriteManager.h"
+#include "InputManager.h"
+
+
 
 //Object Layer Header Goes here
