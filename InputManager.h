@@ -14,8 +14,8 @@ private:
 		E_KEY_NONE,
 	};
 
-	bool curKey[MAXKEY];
-	bool oldKey[MAXKEY];
+	bool curKey[256];
+	bool oldKey[256];
 
 public:
 	void Update();
