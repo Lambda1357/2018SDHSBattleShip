@@ -50,3 +50,15 @@ typedef struct tagInfo
 	D3DXCOLOR	tColor;
 }INFO;
 
+enum DRAWORDERTAG
+{
+	DTAG_INFOUI,		
+	DATG_EFF,	
+	DTAG_UNIT,	
+	DTAG_TILEUI,	
+	DTAG_TILE,	
+	DTAG_BACKGROUND = 99
+
+};
+
+//Object Layer Header Goes here

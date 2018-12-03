@@ -31,6 +31,9 @@
     <Filter Include="Manager\Input">
       <UniqueIdentifier>{b2b93348-78a4-45cd-a437-412ceab0db15}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Button">
+      <UniqueIdentifier>{2e09d710-6620-4de1-bac8-64be352b73c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainGame.cpp">
@@ -89,6 +92,9 @@
     </ClInclude>
     <ClInclude Include="InputManager.h">
       <Filter>Manager\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Object\Button</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
