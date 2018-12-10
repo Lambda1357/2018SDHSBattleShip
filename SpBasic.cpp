@@ -48,7 +48,7 @@ float deltaTime;
 INT Create( HINSTANCE hInst)
 {
 	m_hInst	= hInst;
-	strcpy_s(m_sCls, "D3D Tutorial");
+	strcpy_s(m_sCls, TEXT("D3D Tutorial"));
 
 	//윈도우 클래스 초기화
 	WNDCLASS wc ={CS_CLASSDC, WndProc, 0L, 0L, m_hInst, NULL, 

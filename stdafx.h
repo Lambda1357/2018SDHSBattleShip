@@ -5,6 +5,9 @@
 #include <d3dx9.h> //DX 확장 함수
 #pragma comment(lib, "d3dx9.lib") //DX 확장 라이브러리
 
+#pragma comment(lib, "winmm.lib")
+
+#include <Windows.h>
 #include <iostream>
 #include <functional>
 #include <list>
@@ -60,6 +63,7 @@ enum DRAWORDERTAG
 #include "ObjectManager.h"
 #include "SpriteManager.h"
 #include "InputManager.h"
+#include "CameraManager.h"
 
 
 

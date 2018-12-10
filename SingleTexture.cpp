@@ -26,5 +26,5 @@ SingleTexture::SingleTexture()
 
 SingleTexture::~SingleTexture()
 {
-	SAFE_DELETE(texture);
+	SAFE_RELEASE(texture);
 }

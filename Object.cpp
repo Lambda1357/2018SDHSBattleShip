@@ -2,7 +2,7 @@
 
 
 
-Object::Object() : drawOrder(0), deleted(false)
+Object::Object() : drawOrder(0), deleted(false), enabled(true)
 {
 }
 
