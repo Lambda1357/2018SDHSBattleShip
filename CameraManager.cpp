@@ -17,6 +17,7 @@ void CameraManager::Init()
 	angle = 0.0f;
 
 	shakeTime = 0.0f;
+	shakeMagnitude = 20;																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									
 }
 
 void CameraManager::Update()
