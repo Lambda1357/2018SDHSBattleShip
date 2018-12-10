@@ -57,7 +57,7 @@ void ObjectManager::Render()
 
 	for (auto iter : tempObjectList)
 	{
-		if (iter->GetEnabled()) continue;
+		if (!iter->GetEnabled()) continue;
 		iter->Render();
 	}
 }
