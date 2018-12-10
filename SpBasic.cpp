@@ -220,13 +220,7 @@ INT Init()
 
 void Destroy()
 {
-	// 디바이스 해제 이전에 텍스처를 해제
-	if(m_pTx1)
-	{
-		m_pTx1->Release();
-		m_pTx1 = NULL;
-		mainGame.Destroy();
-	}
+	mainGame.Destroy();
 }
 
 INT FrameMove()

@@ -57,10 +57,14 @@ enum DRAWORDERTAG
 
 #include "Singleton.h"
 
+#include "Object.h"
+
 #include "ObjectManager.h"
 #include "SpriteManager.h"
 #include "InputManager.h"
 
-
-
 //Object Layer Header Goes here
+
+#include "Button.h"
+
+#include "MainGame.h"

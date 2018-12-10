@@ -21,7 +21,7 @@ Texture * MultiTexture::AddImage(const TCHAR * path, int iCnt)
 
 Texture * MultiTexture::FindImage(int iCnt)
 {
-	if (iCnt > 0)
+	if (iCnt >= 0)
 		return textureVec[iCnt];
 
 	return this;
