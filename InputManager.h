@@ -1,6 +1,4 @@
 #pragma once
-#include "Singleton.h"
-#include "stdafx.h"
 
 class InputManager :
 	public Singleton<InputManager>

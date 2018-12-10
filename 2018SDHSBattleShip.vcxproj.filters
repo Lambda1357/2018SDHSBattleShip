@@ -34,6 +34,9 @@
     <Filter Include="Object\Button">
       <UniqueIdentifier>{2e09d710-6620-4de1-bac8-64be352b73c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Manager\Camera">
+      <UniqueIdentifier>{293875e9-bcc7-45de-ae96-1a387b343568}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainGame.cpp">
@@ -63,6 +66,9 @@
     </ClCompile>
     <ClCompile Include="Button.cpp">
       <Filter>Object\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraManager.cpp">
+      <Filter>Manager\Camera</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +104,9 @@
     </ClInclude>
     <ClInclude Include="Button.h">
       <Filter>Object\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraManager.h">
+      <Filter>Manager\Camera</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

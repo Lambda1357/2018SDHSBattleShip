@@ -1,6 +1,4 @@
-#include "CameraManager.h"
 #include "stdafx.h"
-
 
 void CameraManager::SetTransform()
 {

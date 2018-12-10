@@ -1,6 +1,4 @@
-#include "InputManager.h"
-
-
+#include "stdafx.h"
 
 void InputManager::Update()
 {

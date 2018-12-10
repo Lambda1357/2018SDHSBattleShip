@@ -1,7 +1,4 @@
-#include "MultiTexture.h"
-#include "SingleTexture.h"
-
-
+#include "stdafx.h"
 
 Texture * MultiTexture::AddImage(const TCHAR * path, int iCnt)
 {

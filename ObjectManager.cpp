@@ -1,7 +1,4 @@
-#include "ObjectManager.h"
-#include "Object.h"
-
-
+#include "stdafx.h"
 
 void ObjectManager::Init()
 {

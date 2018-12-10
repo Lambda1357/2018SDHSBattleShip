@@ -1,8 +1,4 @@
-#include "MainGame.h"
 #include "stdafx.h"
-
-#include <time.h>
-
 
 MainGame::MainGame()
 {
@@ -11,12 +7,15 @@ MainGame::MainGame()
 
 MainGame::~MainGame()
 {
-	Destroy();
+
 }
 
 void MainGame::Init()
 {
 	srand((unsigned int)time(NULL));
+	SPRITEMANAGER->AddImage("testBtn", "./btn%d.png", 3);
+	Button* testBtn = new Button(D3DXVECTOR3(30, 30, 1), D3DXVECTOR3(97, 61, 1), "testBtn", [&]() {SendMessage(GetHWnd(), WM_QUIT, 0, 0); });
+	OBJECTMANAGER->AddObject(OBJ_SHIP, testBtn);
 }
 
 void MainGame::Update()

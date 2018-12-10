@@ -1,7 +1,4 @@
 #include "stdafx.h"
-#include "SingleTexture.h"
-
-
 
 Texture * SingleTexture::AddImage(const TCHAR * path, int iCnt)
 {

@@ -1,6 +1,4 @@
-#include "SpriteManager.h"
-#include "SingleTexture.h"
-#include "MultiTexture.h"
+#include "stdafx.h"
 
 
 void SpriteManager::AddImage(const string & key, const TCHAR * path, int iCnt)

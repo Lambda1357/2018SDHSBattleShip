@@ -14,6 +14,7 @@
 #include <vector>
 #include <map>
 #include <string>
+#include <time.h>
 
 using namespace std;
 
@@ -59,6 +60,10 @@ enum DRAWORDERTAG
 
 
 #include "Singleton.h"
+
+#include "Texture.h"
+#include "SingleTexture.h"
+#include "MultiTexture.h"
 
 #include "Object.h"
 
