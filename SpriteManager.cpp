@@ -22,7 +22,7 @@ Texture * SpriteManager::FindImage(const string & key, int iCnt)
 
 	if (iter != textureMap.end())
 	{
-		return iter->second->FindImage(iCnt);
+		return iter->second;
 	}
 
 	return nullptr;

@@ -28,7 +28,7 @@ void ObjectManager::Update()
 		{
 			for (auto iter = ObjList.begin(); iter != ObjList.end(); iter++)
 			{
-				if ((*iter)->GetEnabled()) continue;
+				if (!(*iter)->GetEnabled()) continue;
 				(*iter)->Update();
 			}
 		}

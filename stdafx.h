@@ -62,8 +62,8 @@ enum DRAWORDERTAG
 #include "Singleton.h"
 
 #include "Texture.h"
-#include "SingleTexture.h"
 #include "MultiTexture.h"
+#include "SingleTexture.h"
 
 #include "Object.h"
 
