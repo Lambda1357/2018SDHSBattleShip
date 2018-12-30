@@ -58,6 +58,7 @@ enum DRAWORDERTAG
 
 };
 
+#include "Lerf.h"
 
 #include "Singleton.h"
 
