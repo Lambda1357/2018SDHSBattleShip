@@ -37,6 +37,9 @@
     <Filter Include="Manager\Camera">
       <UniqueIdentifier>{293875e9-bcc7-45de-ae96-1a387b343568}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{79714967-d6b2-40a6-9ae9-b89820c9c7f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainGame.cpp">
@@ -107,6 +110,9 @@
     </ClInclude>
     <ClInclude Include="CameraManager.h">
       <Filter>Manager\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Lerf.h">
+      <Filter>Math</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
