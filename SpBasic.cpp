@@ -9,8 +9,8 @@ char				m_sCls[128]; //윈도우 이름에 필요
 HINSTANCE			m_hInst		= NULL;
 HWND				m_hWnd		= NULL;
 DWORD				m_dWinStyle	= WS_OVERLAPPEDWINDOW| WS_VISIBLE;
-DWORD				m_dScnX		= 800;			// Screen Width
-DWORD				m_dScnY		= 600;			// Screen Height
+DWORD				m_dScnX		= SCR_SIZE_X;			// Screen Width
+DWORD				m_dScnY		= SCR_SIZE_Y;			// Screen Height
 
 //DirectX에 필요한 변수
 												// 항상 포인터들은 NULL로 초기화
@@ -48,7 +48,7 @@ float deltaTime;
 INT Create( HINSTANCE hInst)
 {
 	m_hInst	= hInst;
-	strcpy_s(m_sCls, TEXT("D3D Tutorial"));
+	strcpy_s(m_sCls, TEXT(PROGRAM_TITLE));
 
 	//윈도우 클래스 초기화
 	WNDCLASS wc ={CS_CLASSDC, WndProc, 0L, 0L, m_hInst, NULL, 

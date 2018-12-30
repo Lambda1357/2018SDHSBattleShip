@@ -75,6 +75,8 @@ enum DRAWORDERTAG
 
 //Object Layer Header Goes here
 
+#include "Settings.h"
+
 #include "Button.h"
 
 #include "MainGame.h"
